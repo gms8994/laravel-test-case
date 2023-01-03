@@ -2,11 +2,14 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
+    protected User $user;
+
     /**
      * Seed the application's database.
      *
@@ -14,7 +17,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->user = \App\Models\User::factory()->createOne();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
